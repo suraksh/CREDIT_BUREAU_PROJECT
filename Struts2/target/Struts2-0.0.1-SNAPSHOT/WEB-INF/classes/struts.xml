@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="com.recluit.lab" extends="struts-default">
+	
+	<action name="index">
+	<result>/index.jsp</result>
+	</action>
+	
+	<action name="loan" class="com.recluit.lab.action.CustomerAction">
+		<result name="success">/books.jsp</result>
+		<result name="error">/error.jsp</result>
+		<result name="NO_RECORDS">/createRecord.jsp</result>
+		<result name="LOAN_ESTABLISHMENT">/createRecord.jsp</result>
+		<result name="MODIFY">/overWrite.jsp</result>
+		<result name="DONT_GIVE_LOAN">/noLoan.jsp</result>
+	</action>
+	
+	<action name="loan_establishment" class="com.recluit.lab.action.LoanEstablishmentAction">
+		<result name="success">/confirmView.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	</package>
+</struts>
